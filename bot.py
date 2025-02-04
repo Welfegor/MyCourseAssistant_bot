@@ -1,5 +1,5 @@
-from telegram import Update, ReplyKeyboardMarkup
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
+from telegram import Update
+from telegram.ext import Updater, CommandHandler, MessageHandler, filters, CallbackContext
 
 def start(update: Update, context: CallbackContext):
     keyboard = [["📚 Поиск курсов", "🗓 Расписание"], ["🔔 Напоминания", "❓ Помощь"]]
@@ -22,11 +22,11 @@ def handle_message(update: Update, context: CallbackContext):
         update.message.reply_text("Извините, я вас не понял. Пожалуйста, выберите действие из меню.")
 
 def main():
-    updater = Updater("7251612310:AAEyNnRxqVRFnL8X4aBL_eK_3y3aNel8XH8")
+    updater = Updater("<Ваш API-ключ Telegram>")
 
     dp = updater.dispatcher
     dp.add_handler(CommandHandler("start", start))
-    dp.add_handler(MessageHandler(Filters.text & ~Filters.command, handle_message))
+    dp.add_handler(MessageHandler(filters.text & ~filters.command, handle_message))
 
     updater.start_polling()
     updater.idle()
