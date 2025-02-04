@@ -22,7 +22,7 @@ def handle_message(update: Update, context: CallbackContext):
         update.message.reply_text("Извините, я вас не понял. Пожалуйста, выберите действие из меню.")
 
 def main():
-    updater = Updater("<Ваш API-ключ Telegram>")
+    updater = Updater("7251612310:AAEyNnRxqVRFnL8X4aBL_eK_3y3aNel8XH8")
 
     dp = updater.dispatcher
     dp.add_handler(CommandHandler("start", start))
