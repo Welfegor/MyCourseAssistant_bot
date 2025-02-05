@@ -3,7 +3,7 @@ from datetime import time
 from telegram import Update, ReplyKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, CallbackContext
 
-TOKEN = "ВАШ_ТОКЕН"
+TOKEN = "7251612310:AAEyNnRxqVRFnL8X4aBL_eK_3y3aNel8XH8"
 
 # Флаг для включения/выключения напоминаний
 user_reminders = {}
